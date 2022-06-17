@@ -1,0 +1,69 @@
+<div > 
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+<div class="nombre_cafe"> Café Andre</div>
+<!---
+<div class="formulario_login">
+    <form action="">
+        <div>
+            <label for="">Usuario:</label>
+            <input type="text"  required>
+        </div>
+        <div>
+            <label for="">Contraseña:</label>
+            <input type="password" required>
+        </div>
+        <div>
+            <button (click)="login()">login</button>
+        </div>
+    </form>    
+</div>
+-->
+
+<div class="formulario_login" >        
+    <form >        
+        <div *ngIf="error()">
+         <strong style="color: crimson;">       Usuario o Contraseña incorretos  </strong><br><br>
+         
+        </div>
+        <div>
+            <label for="usuario">Usuario:</label>
+            <input type=text name="usuario" id="usaurio"  [(ngModel)]="datosLogin.usuario"
+            placeholder="Introdusca su usaurio" required/>
+        </div>
+        <div>
+            <label for="usuario">Contraseña:</label>
+            <input type=password name="contrasena" id="contrasena"  [(ngModel)]="datosLogin.contrasena"
+            placeholder="Contraseña" required/>
+        </div>
+        <div>	   
+            
+            <button type="submit" (click)="login(datosLogin.usuario,datosLogin.contrasena)" >
+                Login
+            </button>
+
+        </div>	
+    </form>        
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+
+
+
+    
+

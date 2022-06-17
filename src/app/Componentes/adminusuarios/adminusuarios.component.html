@@ -1,0 +1,150 @@
+<div style="background-color: #7e634e;" >                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>             
+    </div>
+</div>
+
+
+<div>
+    <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-7">
+            <br>
+            <br>
+            <div class="container">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Lista de usuarios</h4>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-hover" width="70%" align="center">
+                        <thead>
+                          <tr >
+                            <th><small>CI</small></th>
+                            <th><small>NOMBRE</small></th>
+                            <th><small>ROL</small></th>
+                            <th><small>USUARIO</small></th>
+                            <th><small>ACTIVO</small></th>
+                            <th><small>ACCION</small></th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let empleado of empleados" >
+                            <td><small> {{empleado.ci}}</small> </td>
+                            <td><small> {{empleado.nombre}} {{empleado.apellidos}}</small></td>
+                            <td><small> {{empleado.rol}} </small> </td>
+                            <td><small> {{empleado.usuario}} </small> </td>
+                            <td align="center"><small> {{empleado.activo}} </small> </td>
+                            <td align="center"><small>
+                                
+                              <button (click)="editar_usuario(empleado)"  class="btn btn-warning">Editar</button>                              
+                            </small>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+            
+        </div>
+        
+        <div class="col-2" >
+            <br><br>
+            <button (click)="usuario_nuevo()"  class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+                Usuario Nuevo
+            </button>                              
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----****************************************************
+<div>
+    <br>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            
+
+
+            <div class="formulario_mis_datos" >        
+                <form >        
+                    <h4>Mis datos personales </h4>                
+                    <hr>
+                    <div>
+                        <label >Usuario:</label>
+                        <input type=text name=""  >
+                    </div>
+
+                    <div>
+                        <label >Carnet de Identidad:</label>
+                        <input type=text  >
+                    </div>
+                    <div>
+                        <label >Nombres:</label>
+                        <input type=text  >
+                    </div>
+
+                    <div>
+                        <label >Apellidos:</label>
+                        <input type=text >
+                    </div>
+                    <div>
+                        <label >Genero:</label>
+                        <input type=text >
+                    </div>
+                   
+                    <div>
+                        <label style="vertical-align:top">Dirección:</label>
+                        <textarea name="texto" rows="4" [(ngModel)]="empleado.direccion"> </textarea>
+                    </div>
+                    <div>
+                        <label >Celular:</label>
+                        <input type=text name="celular" [(ngModel)]="empleado.celular">
+                    </div>                    
+                   
+
+                    <div>   
+
+                        <button  >
+                            Actualizar
+                        </button>
+            
+                    </div>	
+                </form>        
+            </div>
+            
+            
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+---->

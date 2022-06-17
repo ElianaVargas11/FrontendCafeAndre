@@ -1,0 +1,43 @@
+<div style="background-color: #7e634e;">                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>             
+</div>
+</div>
+
+<div>
+    <br>
+    <br>
+    
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            
+            <div class="formulario_mis_datos" >        
+                <form action="">
+                    <h4>Nueva categoria</h4>                                                      
+                    <hr>                
+                    <div>
+                        <label >Nombre Categoria:</label>
+                        <input type=text name="categoria" maxlength="40" [(ngModel)]="categoria.categoriaprod">                        
+                    </div>    
+                                        
+                    <div>
+                        <label >Estado activo:</label>
+                        <input type="radio" name="activo" value="si" [(ngModel)]="categoria.activo" checked > Si
+                        <input type="radio" name="activo" value="no" [(ngModel)]="categoria.activo"> No
+                    </div>   
+                              
+                    <div>                        
+
+                        <button (click)="actualizar_categoria(categoria)" >
+                            Registrar nueva categoria
+                        </button>
+            
+                    </div>
+                </form>   
+        </div>
+    </div>
+</div>

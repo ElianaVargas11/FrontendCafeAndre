@@ -1,0 +1,75 @@
+<div style="background-color:#7e634e;">                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>             
+</div>
+</div>
+
+<div>
+    <br>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            
+            
+
+            <div class="formulario_mis_datos" >        
+                <form action="">
+                    <h4>Editar datos producto </h4>                
+                    <hr>
+                
+                    <div>
+                        <label >Producto:</label>
+                        <input type=text maxlength="50" name="usuario" [(ngModel)]="producto.nombreproducto" required>                        
+                    </div>    
+
+                    <div>
+                        <label >Precio:</label>
+                        <input type=number maxlength="3" name="precio"  [(ngModel)]="producto.precio" required #precio="ngModel"/>
+                        <div [hidden]="precio.valid || precio.pristine" class="invalid-feedback" >Valor requerido</div>
+                    </div>
+              
+                    <div>
+                        <label style="vertical-align:top">Descripción:</label>
+                        <textarea name="texto" rows="3"  maxlength="240" [(ngModel)]="producto.descripcion" required> </textarea>
+                    </div>
+                    <div>
+                        <label >Direccion Imagen:</label>
+                        <input type=text maxlength="500" name="imagen" [(ngModel)]="producto.foto" required>                        
+                    </div>     
+                    <label algin="rigth">Imagen:</label> <img src="{{producto.foto}}" alt="" width="55" height="50">                                   
+             
+                    <div>
+                        <label >Categoria:</label>
+                        <select name="menu" [(ngModel)]="producto.idcategoria" select>
+                            <option [(ngModel)]="producto.idcategoria" selected>...</option>
+                            <optgroup *ngFor="let categoria of categorias">
+                                <option value="{{categoria.idcategoria}}" > {{categoria.categoriaprod}}</option>                              
+                            </optgroup>
+                          </select>                        
+                    </div>     
+                    
+                    
+
+                    <div>
+                        <label >Producto Habilitado:</label>
+                        <input type="radio" name="activo" value="si" [(ngModel)]="producto.activo" checked > Si
+                        <input type="radio" name="activo" value="no" [(ngModel)]="producto.activo"> No
+                    </div>   
+
+                    <div>
+                        <button (click)="actualizar_producto(producto)" >
+                            Actualizar
+                        </button>
+            
+                    </div>
+                </form>                    	
+
+
+        </div>
+    </div>
+</div>
+
+

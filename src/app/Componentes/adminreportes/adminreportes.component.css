@@ -1,0 +1,92 @@
+
+.formulario_repo form{
+	
+	width: auto;
+		
+	font-family: "arial";
+	font-size: 13px;	
+	
+}
+
+.formulario_repo form label{
+	width:auto;	
+	font-weight:bold;
+	display:inline-block;
+}
+
+.formulario_repo form input[type="date"]{
+	width:190px;
+	padding:3px 15px;
+	border:1px solid #E6E6E6;
+	border-radius:5px;
+	background-color:#dbdeecf1;
+	margin:7px 0;
+	display:inline-block;
+}
+
+.formulario_repo form button
+{   
+	width:100%;
+	padding:8px 36px;
+	margin-top:10px;
+	border: 0px solid  #FFFFFF;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#f34d37;	
+	font-weight: bold;
+	font-size: 14px;	
+} 
+
+
+
+/*------------------------------------------------ CARRITO detalle  ------------------*/
+.carrito_detalle{
+    background-color: #1F1B1C; 
+    color:white; 
+  }
+
+
+
+
+
+  @media print{
+	.doNotPrint{display:none !important;}
+  }
+
+
+
+  .reporte_casilla{
+	
+	width: 270px;
+    height:370px;
+	padding:15px 15px 25px 15px;
+	border-radius:0px;
+	margin: 15px;
+	background-color:rgb(235, 233, 233); /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+  /*-----------------------------------------PARA FORMULARIO mis datos-------------*/
+
+.reporte_hoja{
+	
+	width: 90%;
+	padding:15px 15px 25px 15px;
+	border-radius:0px;
+	margin: 15px;
+	background-color:#fff; /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+
+
+.espacio_td{
+margin: 5px;
+padding:5px 10px 5px 10px;
+
+}

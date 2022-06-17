@@ -1,0 +1,187 @@
+<div style="background-color: #7e634e;" >                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>             
+    </div>
+</div>
+
+
+
+
+<div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-9">
+            
+            <div id="reporte" align="center" width="99%">
+                <!--------------------------------------------------------------------------DETALLE reporte------------------------------>
+                <br>   
+                
+                <div  align="left" class="reporte_hoja">         
+                    <STROng>
+                    <H5> CAFÉ ANDRE</H5>
+                    <h6>REPORTE DIARIO VENTAS </h6>  <h6> Fecha: {{fecha_desde}} </h6>
+                </STROng>
+                    <hr><br>
+
+                    <div>
+                        <strong>RESUMEN VENTAS DEL DÍA</strong>
+                        <table >
+                            <thead>                                                                                                                  
+                                <tr  class="carrito_detalle"  align="center">                                 
+                                     <td class="espacio_td">Nombre Usuario</td>
+                                     <td class="espacio_td">Pedidos Vendidos </td>
+                                     <td class="espacio_td">Productos Vendidos </td>
+                                     <td class="espacio_td">Recaudado (Bs.) </td>                                                               
+                                </tr>  
+                            </thead>
+                            <tbody >
+                                <tr  *ngFor="let reportetotal of reportetotales" >
+                                    <td align="left"> {{reportetotal.nombreempleado }} </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotal.totalpedidos }} </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotal.totalcantidad }} </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotal.totalprecio }} Bs.</td>
+                                </tr>	                        
+                                <tr style="color: white; background-color:#275fa8" *ngFor="let reportetotalsum of reportetotalessuma"  >
+                                    <td align="right"> Total: </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotalsum.totalpedidos }} </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotalsum.totalcantidad }} </td>
+                                    <td align="right" class="espacio_td2"> {{reportetotalsum.totalprecio }} Bs.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                    </div>    
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <strong> DETALLE DE PRODUCTOS VEDIDOS E IMPORTE TOTAL RECAUDADO POR PRODUCTO  </strong>
+                            <table border="0" cellspacing="0" cellpadding="0" align="top" >                                        
+                                <thead>                                                                                                                  
+                                    <tr  class="carrito_detalle"  align="center">                                         
+                                         <td class="espacio_td">N°</td>
+                                         <td class="espacio_td">Producto</td>
+                                         <td class="espacio_td" >Total Producto </td>
+                                         <td class="espacio_td" >Total Producto % </td>
+                                         <td class="espacio_td">Total Recaudado Bs.</td>                                     
+                                         <td class="espacio_td">Total Recaudado %</td>                                     
+                                        
+                                    </tr>  
+                                </thead>    
+                                <tbody >
+                                    <tr  *ngFor="let reporteventa of reporteventas" >
+                                        <td align="center"> {{reporteventa.idproducto }} </td>
+                                        <td > {{reporteventa.nombreproducto }} </td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.totalcantidad }} </td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.xzencantidad }} %</td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.totalprecio }} Bs.</td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.xzenprecio }} %</td>
+                                    </tr>	
+                                
+                                </tbody>
+                            </table>        
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-6"> </div>
+                        <div class="col-6"> </div>
+                    </div>
+                    <hr>
+
+
+
+                    <div class="row">
+                        <div class="col-6"> 
+                            <br>
+                            Cambiar cuadro estadistico a: 
+                            <button class="btn btn-outline-success btn-sm" (click)="pie()">Pie</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="dona()">Dona</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="polar()">Polar</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="line()">Linea</button>        
+                            <button class="btn btn-outline-success btn-sm" (click)="barra()">Barra</button>        
+                            <br>
+                            <br>
+        
+
+                            <strong> CANTIDAD DE PRODUCTOS VEDIDOS </strong>
+                            <table border="0" cellspacing="0" cellpadding="0" >                                        
+                                <thead>                                                                                                                  
+                                    <tr class="carrito_detalle"  align="center">                                         
+                                         <td class="espacio_td">N°</td>
+                                         <td class="espacio_td">Producto</td>
+                                         <td class="espacio_td">Cantidad Total </td>
+                                         <td class="espacio_td"> %</td>                                         
+                                        
+                                    </tr>  
+                                </thead>    
+                                <tbody >
+                                    <tr  *ngFor="let reporteventa of reporteventas" >
+                                        <td align="center"> {{reporteventa.idproducto }} </td>
+                                        <td > {{reporteventa.nombreproducto }} </td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.totalcantidad }} </td>
+                                        <td > 
+                                            <table>
+                                                <tr>
+                                                    <td width="110px">
+                                                        <div class="grafico"><strong class="barra" style="width:{{ reporteventa.xzencantidad }}%"></strong></div>
+                                                    </td>
+                                                    <td width="50px" >{{ reporteventa.xzencantidad }} % </td>
+                                                </tr>
+                                            </table>                                 
+                                            
+                                        </td>
+                                    </tr>	                                
+                                </tbody>
+                            </table>                                  
+                        </div>
+                        <div class="col-6" > 
+                            <table width="400px">
+                                <tr>
+                                    <td>
+                                        <div >
+                                            <canvas baseChart                                               
+                                              [data]="polarAreaChartData"
+                                              [legend]="polarAreaLegend"
+                                              [type]="polarAreaChartType"
+                                              [options]="pieChartOptions"                                              >
+                                            </canvas>
+                                          </div>
+                                    </td>
+                                </tr>
+                            </table>                            
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    <div>
+                        <app-adminreportediariorecaudado></app-adminreportediariorecaudado>
+                    </div>                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1"> 
+            <br>
+            <br>
+            <a href="javascript:imprSelec('reporte')" class="btn btn-success"  >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                    <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                    <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                </svg>
+                imprimir                                
+            </a>  
+        </div>
+
+
+
+    </div>
+</div>

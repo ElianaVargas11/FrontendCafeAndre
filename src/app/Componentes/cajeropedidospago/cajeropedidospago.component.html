@@ -1,0 +1,93 @@
+
+<div style="background-color:#7e634e;" >                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>     
+        <div class="col-10">
+            
+       </div>  
+    </div>
+</div>
+
+<div >                 
+    <div class="row">
+        <div class="col-2">
+            
+        </div>     
+        <div class="col-8">
+
+            <div align="center">
+<!--------------------------------------------------------------------------DETALLE carrito pedido------------------------------>
+        <br>   
+        <div class="formulario_mis_datos" >        
+            <form > 
+        <table width="410px" border="0" cellspacing="0" cellpadding="0">
+
+                <thead>
+                    <h4>Detalle pedido </h4>                
+                    
+                    <tr class="carrito_detalle"  align="center"> 
+                        
+                         <td><small>Producto</small></td>
+                         <td><small>Precio Unitario</small></td>
+                         <td><small>Cantidad</small></td>
+                         <td><small>Sub.Total</small></td>
+                         
+                        
+                    </tr>  
+                </thead>    
+                <tbody>
+                    <tr  align="right" *ngFor="let pedidoproducto of pedidoproductos"  >
+                        <td align="left"> <small>{{pedidoproducto.nombreproducto }}</small></td>
+                        <td><small>{{pedidoproducto.preciounitario }} Bs. </small></td>
+                        <td><small>{{pedidoproducto.cantidad}}</small></td>
+                        <td><small>{{pedidoproducto.preciounitario * pedidoproducto.cantidad }} Bs.</small></td>
+                    </tr>	
+                    <tr align="right" class="carrito_detalle"> 
+                        <td></td>
+                        <td>TOTAL: </td>
+                        <td>{{totalpedidoproducto.cantidad }}</td>
+                        <td>{{totalpedidoproducto.preciounitario}} Bs.</td>
+                    </tr>
+                </tbody>
+            </table>            
+<!--------------------------------------------------------------------------DETALLE carrito pedido------------------------------>
+                                             
+                    
+                
+                    <div>
+                        <label >CI/NIT:</label>
+                        <input type=number maxlength="10" name="ci" [(ngModel)]="cliente.ci" placeholder="Escriba CI o NIT" required/>                        
+                    </div>    
+                    <div>
+                        <label >Nombre:</label>
+                        <input type=text name="nombre"  [(ngModel)]="cliente.nombre" placeholder="Nombre de cliente" required/>                        
+                    </div>
+              
+                              
+                    <div>
+                      
+
+                        <button (click)="realizarVenta(cliente)" >
+                            Realizar venta
+                        </button>
+            
+                    </div>
+
+
+                </form>        
+            </div>              
+        </div>
+
+     
+        
+
+
+       </div>  
+
+
+    </div>
+</div>
+

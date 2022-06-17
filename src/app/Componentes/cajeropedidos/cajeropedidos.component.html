@@ -1,0 +1,156 @@
+
+<div style="background-color:#7e634e" >                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>     
+        <div class="col-10">
+            <div class="menu_horizontal">                
+                Categorías:              
+                <strong *ngFor="let categoria of categorias">                   
+                    <span>
+                    <a (click)="listarProductos(categoria.idcategoria)">
+                        {{categoria.categoriaprod}}
+                    </a>
+                    </span>                
+                </strong>  
+            </div>
+       </div>  
+    </div>
+</div>
+
+
+<div style="width: 99.6%;" >
+    <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-7" style="background-color: white;" > 
+
+<!---            <pre>{{ pedido | json }}</pre>
+------------------------------------------------------------- PRODUCTOS SEGUN CATEGORIA --------------------------->
+            <ul class="ca-menu" *ngFor="let producto of productos">	
+            <strong>
+                <li (click)="addProductoCarrito(producto.idproducto, producto.nombreproducto, producto.precio)"> 
+                        <div >
+                            <img src="{{producto.foto}}" height="100px" width="140px">
+                            <div align="center" >{{producto.nombreproducto}}</div>                            
+                        </div>
+                        
+                        <div align="center" >
+                            <hr width="150" style="margin:1px 1px 1px 1px"> 
+                            <strong>
+                                Precio: {{producto.precio}} Bs.
+                            </strong>
+                            <br>
+                        </div>                    
+                </li>	
+            </strong>
+            </ul>    
+       
+
+
+        </div>
+        <div class="col-3" *ngIf="totalpedidoproducto.preciounitario>0" >
+
+            <!-----------------
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>           
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </svg>
+            -------------->
+
+
+<!----------------------------------------------------------------------------------TOTAL PEDIDO----------------------------->
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="carrito"  >
+                <tbody>
+                   <tr>
+                       <td width="30%" align="center" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                        </svg>                           
+                        </td>
+                       <td width="40%" align="right" >
+                           <div width="70%">  TOTAL PEDIDO:  </div>
+                           <div vertical-align="sub" > Total productos:</div>
+                           
+                        </td>
+                       <td width="30%" align="center">
+                            <div width="70%" >
+                            <span style="font-size: 20px;"> {{totalpedidoproducto.preciounitario}} </span>
+                            Bs.
+                            </div>
+                            <div >{{totalpedidoproducto.cantidad }} </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>            		
+
+
+
+
+<!-----------------------------------------------------------------------------------DETALLE carrito pedido------------------------------>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    
+                    <tr class="carrito_detalle"  align="center"> 
+                        
+                         <td><small>Producto</small></td>
+                         <td><small>P. U.</small></td>
+                         <td><small>Cantidad</small></td>
+                         <td><small>Sub.Total</small></td>
+                         <td><small>Opción</small></td>                      
+                        
+                    </tr>  
+<!----------------------------------------------- CARRITO  ----------------------------------------------------------->                  
+
+
+
+                    <tr  align="right" *ngFor="let pedidoproducto of pedidoproductos"  >
+
+                        <td align="left"> <small>{{pedidoproducto.nombreproducto }}</small></td>
+                        <td><small>{{pedidoproducto.preciounitario }} Bs. </small></td>
+                        <td>
+                            <input  style="width: 45px; text-align: right;  border:1px solid #E6E6E6; border-radius:5px; Background-color:#dbd6d1;"  name="cantidad" type=number id="cantidad" 
+                            [(ngModel)]="pedidoproducto.cantidad" min="1" max="9999" required />
+                        </td>
+                        <td><small>{{pedidoproducto.preciounitario * pedidoproducto.cantidad }} Bs.</small></td>
+                        <td>
+                            <a (click)="nuevoPedidoproducto(pedidoproducto)" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                  </svg>                                    
+                            </a >
+                            
+                            <a  (click)="borrarDeCarrito(pedidoproducto)"   style="color:red;" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                                </svg>
+                                
+                            </a>
+                        </td>                        
+                </tr>	
+<!----------------------------------------------- CARRITO  ----------------------------------------------------------->
+                </tbody>
+            </table>
+            
+            <br>
+            <div align="center">
+                <button (click)="pagarPedido()" type="button" class="btn btn-warning btn-sm bg-opacity-75" style="width: 60%;">Realizar Pedido </button>
+                <button (click)="cancelarPedido()" type="button" class="btn btn-danger btn-sm" style="width: 40%;">Cancelar</button>
+            </div>				                       
+<!--
+            <pre>{{ pedidoproducto | json }}</pre>
+            <hr>
+            <pre>{{ pedidoproductobuscar | json }}</pre>
+----------------------------------------------------------------------------------DETALLE carrito pedido------------------------------>            
+
+        </div>   
+    </div>
+</div>
+
+

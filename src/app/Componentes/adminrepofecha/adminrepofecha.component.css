@@ -1,0 +1,75 @@
+
+/*------------------------------------------------ CARRITO detalle  ------------------*/
+.carrito_detalle{
+    background-color: #f34d37; 
+    color:white; 
+  }
+
+  @media print{
+	.doNotPrint{display:none !important;}
+  }
+
+  .reporte_casilla{
+	
+	width: 270px;
+    height:370px;
+	padding:15px 15px 25px 15px;
+	border-radius:0px;
+	margin: 15px;
+	background-color:rgb(235, 233, 233); /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+/*-----------------------------------------PARA FORMULARIO mis datos-------------*/
+.reporte_hoja{
+	
+	width: 94%;
+	padding:15px 15px 25px 15px;
+	border-radius:0px;
+	margin: 15px;
+	background-color:#fff; /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+
+.espacio_td{
+margin: 5px;
+padding:5px 10px 5px 10px;
+
+}
+
+.espacio_td2{
+	margin: 0px;
+	padding: 0px 30px 0px 10px;
+	
+	}
+
+/*--------------------------------------------------*/
+
+.grafico {
+	position: relative; /* IE is dumb */
+	width: 100px;
+	border: 1px solid #fff;
+	padding: 1px;
+	background-color: #ddd;;
+	}
+	.grafico .barra {
+	display: block;
+	position: relative;
+	background: #3287d6;
+	text-align: left;
+	color: rgb(0, 0, 0);;
+	height: 20px;
+	line-height: 2em;
+	}
+	.grafico .barra span {
+	position: absolute; left: 1em;
+	}
+	
+
+/*--------------------------------------------------*/
+

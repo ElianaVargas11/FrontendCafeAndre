@@ -1,0 +1,23 @@
+.izquierda{
+    font-size: 10; 
+    margin: 0px 10px 0 0;
+    text-align: right;
+}
+.cerrar{
+    margin: 1px ;
+	/*padding-bottom: 0px;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+	font-family: Impact, "Haettenschweiler", "Franklin Gothic Bold", "Arial Black", "sans-serif" ;
+	*/
+    font-size: 10; 
+	animation: glow 10s ease-in-out infinite alternate;
+   /* color: rgb(54, 124, 230);   
+   */   
+}
+
+.cerrar a:hover 
+{
+    color:black;
+}

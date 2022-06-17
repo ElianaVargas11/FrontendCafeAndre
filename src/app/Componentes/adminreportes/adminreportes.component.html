@@ -1,0 +1,138 @@
+<div style="background-color: #7e634e;" >                 
+    <div class="row">
+        <div class="col-2">
+           <br>
+           <br>
+        </div>             
+    </div>
+</div>
+
+
+<div>
+    <div class="row">
+        <br>
+        <br>
+        <div class="col-2"></div>
+        <div class="col-8" align="center">
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <div class="reporte_casilla">
+                            
+                            
+                            <div align="center">
+                               <h6> <strong> REPORTE DIARIO <br> DE VENTAS </strong></h6>
+                            </div>
+
+                            <div align="center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="83px" fill="currentColor" class="bi bi-journal-richtext" viewBox="0 0 16 16">
+                                    <path d="M7.5 3.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047L11 4.75V7a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 7v-.5s1.54-1.274 1.639-1.208zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                                  </svg>
+                            </div>
+
+                            <div class="formulario_repo">
+                                    <form >
+                                        <button (click)="generarReporteDiario()"> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
+                                                <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>
+                                              </svg>
+
+
+
+
+                                            GENERAR REPORTE
+                                        </button>                                
+                                    </form>
+                            </div>                            
+                            <br>
+                            
+                           
+                            <div align="center">
+                                
+                                <svg  width="150" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+                                viewBox="0 0 328.169 328.169" style="enable-background:new 0 0 328.169 328.169;" xml:space="preserve">
+                                <g>
+                                    <g><rect x="173.682" y="132.754" style="fill:#BF534F;" width="132.754" height="21.395"/>
+                                        <path style="fill:#FF6D68;" d="M173.682,0v132.754h132.754C306.436,59.436,246.999,0,173.682,0z"/></g>
+                                    <g>	<path style="fill:#E0B03B;" d="M248.359,174.02v115.267c24.024-24.024,38.882-57.213,38.882-93.872V174.02H248.359z"/>
+                                        <path style="fill:#FFC843;" d="M287.242,174.02H154.488l93.872,93.871C272.383,243.866,287.242,210.678,287.242,174.02z"/>	</g>
+                                    <g>	<path style="fill:#005FAD;" d="M21.734,174.02v21.395c0,73.317,59.436,132.754,132.754,132.754 
+                                        c36.658,0,69.847-14.858,93.871-38.882v-21.396L21.734,174.02z"/>
+                                        <path style="fill:#0071CE;" d="M154.488,41.265c-73.319,0-132.754,59.437-132.754,132.755 
+                                        c0,73.317,59.436,132.754,132.754,132.754c36.658,0,69.847-14.859,93.871-38.883l-93.871-93.871V41.265z"/>	</g>
+                                </g>
+                                </svg>
+                            </div>
+
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reporte_casilla">
+                           
+                            <div align="center">
+                               <h6> <strong> REPORTE DE VENTAS </strong></h6>
+                               
+                            </div>
+                            
+                            <div class="formulario_repo">
+
+                                <form >       
+                                    <div align="center"><label> RANGO DE FECHAS</label> </div>                        
+                                        
+                                   
+                                        <div>
+                                            <label>Desde :</label>
+                                            <input type="date" name="fechaA" [(ngModel)]="fechaA" required>
+                                        </div>  
+                                        <div>
+                                            <label >Hasta :</label>
+                                            <input type="date" name="fechaB" [(ngModel)]="fechaB"  required>
+                                        </div>  
+
+                                        <button (click)="generarReporteEntreFechas(fechaA,fechaB)">
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
+                                                <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"/>
+                                              </svg>
+                                            GENERAR REPORTE
+                                        </button>                                
+                                    </form>
+                            </div>                            
+                       
+                            <br>
+                           
+                            <div align="center">
+                                
+                                <svg  width="150" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+                                viewBox="0 0 328.169 328.169" style="enable-background:new 0 0 328.169 328.169;" xml:space="preserve">
+                                <g>
+                                    <g><rect x="173.682" y="132.754" style="fill:#BF534F;" width="132.754" height="21.395"/>
+                                        <path style="fill:#FF6D68;" d="M173.682,0v132.754h132.754C306.436,59.436,246.999,0,173.682,0z"/></g>
+                                    <g>	<path style="fill:#E0B03B;" d="M248.359,174.02v115.267c24.024-24.024,38.882-57.213,38.882-93.872V174.02H248.359z"/>
+                                        <path style="fill:#FFC843;" d="M287.242,174.02H154.488l93.872,93.871C272.383,243.866,287.242,210.678,287.242,174.02z"/>	</g>
+                                    <g>	<path style="fill:#005FAD;" d="M21.734,174.02v21.395c0,73.317,59.436,132.754,132.754,132.754 
+                                        c36.658,0,69.847-14.858,93.871-38.882v-21.396L21.734,174.02z"/>
+                                        <path style="fill:#0071CE;" d="M154.488,41.265c-73.319,0-132.754,59.437-132.754,132.755 
+                                        c0,73.317,59.436,132.754,132.754,132.754c36.658,0,69.847-14.859,93.871-38.883l-93.871-93.871V41.265z"/>	</g>
+                                </g>
+                                </svg>
+                            </div>
+
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+
+            
+            
+            
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

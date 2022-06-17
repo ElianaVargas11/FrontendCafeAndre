@@ -1,0 +1,44 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div *ngIf="login_form()">
+  <app-login></app-login>
+</div>
+
+<div *ngIf="menu_admin()" >
+    
+      <div class="row">
+          <div class="col-6">
+              <div class="nombre_cafe_baner">Café Andre</div>
+          </div>    
+          <div class="col-6">
+              <app-logout ></app-logout>
+          </div>    
+      </div>
+    
+    <app-admin></app-admin>    
+  </div>
+
+
+
+  <div *ngIf="menu_cajero()" >
+    
+      <div class="row">
+          <div class="col-6">
+              <div class="nombre_cafe_baner">Café Andre</div>
+          </div>    
+          <div class="col-6">
+              <app-logout ></app-logout>
+          </div>    
+      </div>         
+    <app-cajero></app-cajero>
+  </div>
+
+<router-outlet></router-outlet>

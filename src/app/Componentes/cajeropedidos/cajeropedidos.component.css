@@ -1,0 +1,84 @@
+/*-------------------------------------------------MENU HORIZONTAL-----------------*/
+  
+  .menu_horizontal,.menu_horizontal span {
+    color: #fbfeff;
+    font: 13pt "Roboto", sans-serif,italic;
+    margin: 14px 8px 0px 14px;
+}
+.menu_horizontal :hover {
+    color: black;    
+}
+/*-------------------------------------------------*/
+
+/*------------------------------------------------ CARRITO cabecera  ------------------*/
+.carrito{
+  background-color:black;
+  color: white;    
+}
+/*------------------------------------------------ CARRITO detalle  ------------------*/
+.carrito_detalle{
+  background-color: black; 
+  color:white; 
+}
+
+.negrita{
+  font-weight: 350;
+}
+
+
+/*------------------------------------------------- CARTA "menu"-----------------*/
+
+
+.ca-menu{
+ 
+    padding: 0 0 0 0px;
+    margin: 15px auto;
+    color: #000;
+        
+   /* verflow: visible;
+	/*overflow-style: marquee-line;*/
+}
+.ca-menu li{
+    color: #000;
+    width: 139px;
+    height: 185px;
+	  border: 0px solid rgba(94, 86, 86, 0.541); /*establece el grosor (borde) de las casillas*/
+	  overflow: hidden;
+    position: relative;
+    float:left;
+    
+    
+	  margin-top: 15px; /* espacio entra casillas*/
+    margin-left: 15px;/*espacio sobrepuesto entre botones*/
+	
+   -webkit-box-shadow: -10px 11px 11px 2px rgba(0,0,0,0.35);
+   border-radius: 5px 5px 5px 5px;    
+   -webkit-transition: all 300ms linear;    
+}
+
+
+.ca-main{
+    font-size: 13px;
+    position: absolute;
+    top: 80px;/*ALTURA DEL TEXTO*/
+    height: 155px;
+    width: 175px;
+    left: 50%;
+    margin-left: -85px;
+    /*opacity: 1;*/
+    text-align: center;
+    color: #000;
+}
+
+
+
+.ca-menu li:hover{
+    border-color: #000;
+    z-index: 999;
+    -webkit-transform: scale(1.1);
+}
+
+.ca-menu li:hover .ca-main{
+    color: #000;
+    -webkit-animation: moveFromBottom 500ms ease;
+}

@@ -1,0 +1,95 @@
+/*--------------------------------------------------------- PARA EFECTO EN NOMBRE CAFE ANDRADE----------------------*/
+.nombre_cafe { /*-------------------------NOMBRE CENTRO-----------------------------*/
+	margin: 0;
+	padding-bottom: 6px;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif" ;
+	font-size: 6rem; 
+	animation: glow 10s ease-in-out infinite alternate;
+	text-align: center;
+	/*opacity: 0.95;*/
+	/*border: #154ce2; */
+   
+  }
+
+
+/*-----------------------------------------PARA FORMULARIO login-------------*/
+
+.formulario_login form{
+	width: 310px;;
+	padding:16px 30px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#fff; /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+
+.formulario_login form label{
+	width:100px;	
+	font-weight:bold;
+	display:inline-block;
+}
+
+.formulario_login form select{
+	
+	padding:3px 10px;
+	border:1px solid #E6E6E6;
+	border-radius:5px;
+	background-color:#E6E6E6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+.formulario_login input[type="file"]{
+	width:inherit;	
+	margin:0px 0px 0px 90px;
+	display:inline-block;
+}
+
+		
+.formulario_login  form input[type="text"], .formulario_login form input[type="number"], 
+.formulario_login form input[type="password"], 
+.formulario_login form input[type="email"]{
+	width:150px;
+	padding:3px 10px;
+	border:1px solid #E6E6E6;
+	border-radius:5px;
+	background-color:#dbdeecf1;
+	margin:8px 0;
+	display:inline-block;
+}
+
+.formulario_login form input[type="submit"], .formulario_login form button
+{   
+	width:100%;
+	padding:8px 36px;
+	margin-top:32px;
+	border: 1px solid  #FFFFFF;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#3779f3;	
+	font-weight: bold;
+	
+} 
+
+.formulario_login form input[type="submit"]:hover{
+	cursor:pointer;		
+}
+
+.formulario_login textarea{
+	width:100%;
+	height:50px;
+	border:1px solid #E6E6E6;
+	border-radius:3px;
+	background-color:#E6E6E6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}

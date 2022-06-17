@@ -1,0 +1,63 @@
+
+                    <div class="row">
+                        <div class="col-6"> 
+                            <br>
+                            Cambiar cuadro estadistico a: 
+                            <button class="btn btn-outline-success btn-sm" (click)="pie()">Pie</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="dona()">Dona</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="polar()">Polar</button>
+                            <button class="btn btn-outline-success btn-sm" (click)="line()">Linea</button>        
+                            <button class="btn btn-outline-success btn-sm" (click)="barra()">Barra</button>        
+                            <br>
+                            <br>
+        
+
+                            <strong> RECAUDADO POR PRODUCTO VEDIDO </strong>
+                            <table border="0" cellspacing="0" cellpadding="0" >                                        
+                                <thead>                                                                                                                  
+                                    <tr class="carrito_detalle"  align="center">                                         
+                                         <td class="espacio_td">N°</td>
+                                         <td class="espacio_td">Producto</td>
+                                         <td class="espacio_td">Total Recaudado</td>
+                                         <td class="espacio_td"> %</td>                                         
+                                        
+                                    </tr>  
+                                </thead>    
+                                <tbody >
+                                    <tr  *ngFor="let reporteventa of reporteventas" >
+                                        <td align="center"> {{reporteventa.idproducto }} </td>
+                                        <td > {{reporteventa.nombreproducto }} </td>
+                                        <td class="espacio_td2" align="right"> {{reporteventa.totalprecio }} </td>
+                                        <td > 
+                                            <table>
+                                                <tr>
+                                                    <td width="110px">
+                                                        <div class="grafico"><strong class="barra" style="width:{{ reporteventa.xzenprecio }}%"></strong></div>
+                                                    </td>
+                                                    <td width="50px" >{{ reporteventa.xzenprecio }} % </td>
+                                                </tr>
+                                            </table>                                 
+                                            
+                                        </td>
+                                    </tr>	                                
+                                </tbody>
+                            </table>                                  
+                        </div>
+                        <div class="col-6" > 
+                            <table width="400px">
+                                <tr>
+                                    <td>
+                                        <div >
+                                            <canvas baseChart                                               
+                                              [data]="polarAreaChartData"
+                                              [legend]="polarAreaLegend"
+                                              [type]="polarAreaChartType"
+                                              [options]="pieChartOptions"                                              >
+                                            </canvas>
+                                          </div>
+                                    </td>
+                                </tr>
+                            </table>                            
+                        </div>
+                    </div>
+                    <hr>

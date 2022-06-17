@@ -1,0 +1,17 @@
+
+
+
+.grill{
+	
+	width: 500px;;
+	padding:16px 30px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#fff; /*-------para dar color al formulario*/
+	font-family: "arial";
+	font-size: 13px;
+	box-shadow: -10px 15px 21px 0px #070707;
+	box-sizing:border-box;	
+}
+
+
